@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3111:3111"
+    volumes:
+      - tracker-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  tracker-data:
